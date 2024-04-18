@@ -50,4 +50,4 @@ It also contains pages for signup, login, account, and 404 (Page not Found)
 
 
 
-### Names: Rylan Wasson, Henry Kreemer, Logan Giddings, Cole Yamamura
+### Authors: Rylan Wasson, Henry Kreemer, Logan Giddings, Cole Yamamura
