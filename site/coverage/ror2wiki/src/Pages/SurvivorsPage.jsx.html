@@ -1,0 +1,1018 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for ror2wiki/src/Pages/SurvivorsPage.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">ror2wiki/src/Pages</a> SurvivorsPage.jsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>312/312</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>5/5</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>3/3</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>312/312</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import Survivor from '../components/Survivor';
+import Subheader from "../components/Subheader";
+&nbsp;
+const commandoSkills = [
+    { name:"Double Tap", desc:"Primary\n1.0 Proc Coefficient", details:"Rapidly shoot an enemy for 100% damage." },
+    { name:"Phase Round", desc:"Secondary\n1.0 Proc Coefficient\n3s Cooldown", details:"Fire a piercing bullet for 300% damage. Deals 40% more damage every time it passes through an enemy." },
+    { name:"Tactical Dive", desc:"Utility\n4s Cooldown", details:"Roll a short distance." },
+    { name:"Suppressive Fire", desc:"Special\n1.0 x6+ Proc Coefficient\n9s Cooldown", details:"Stunning.\nFire repeatedly for 100% damage per bullet. The number of shots increases with attack speed." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"Phase Blast", desc:"Secondary\n0.5 x8 Proc Coefficient\n3s Cooldown", details:"Fire two close-range blasts that deal 8x200% damage total." },
+    { name:"Tactical Slide", desc:"Utility\n4s Cooldown", details:"Slide on the ground for a short distance. You can fire while sliding." },
+    { name:"Frag Grenade", desc:"Special\n1.0 Proc Coefficient\n5s Cooldown", details:"Throw a grenade that explodes for 700% damage. Can hold up to 2." },
+];
+&nbsp;
+const commandoDesc = "The Commando is a jack-of-all-trades character that is reliable in all situations of the game.\n"
++ "Double Tap is powerful at both short and long range, firing quickly and activating many item effects.\n"
++ "Effective use of his Tactical Dive is key to dodging heavily telegraphed attacks.\n"
++ "Suppressive Fire can be used to repeatedly stun a single enemy, or stun a group.\n"
++ "Phase Rounds can pass through walls - use that to your advantage!";
+&nbsp;
+const huntressSkills = [
+    { name:"Strafe", desc:"Primary\n1.0 Proc Coefficient", details:"Quickly fire a seeking arrow for 150% damage." },
+    { name:"Laser Glaive", desc:"Secondary\n0.8 Proc Coefficient\n7s Cooldown", details:"Throw a seeking glaive that bounces up to 6 times for 250% damage. Damage increases by 10% per bounce." },
+    { name:"Blink", desc:"Utility\n7s Cooldown", details:"Disappear and teleport forward." },
+    { name:"Arrow Rain", desc:"Special\n0.2 x19 Proc Coefficient\n12s Cooldown", details:"Teleport into the sky. Target an area to rain arrows, slowing all enemies and dealing 330% damage per second." },
+    { name:"Flurry", desc:"Primary\n0.7 x3 Proc Coefficient", details:"Draw back a volley of 3 seeking arrows for 3x100% damage. Critical Strikes fire 6 arrows." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"Phase Blink", desc:"Utility\n2s Cooldown per charge", details:"Disappear and teleport a short distance. Can store up to 3 charges." },
+    { name:"Ballista", desc:"Special\n1.0 x3 Proc Coefficient\n12s Cooldown", details:"Teleport backwards into the sky. Fire up to 3 energy bolts, dealing 3x900% damage." },
+];
+&nbsp;
+const huntressDesc = "The Huntress is an extremely mobile but fragile survivor with a high damage output.\n"
++ "Remember that Strafe can be uniquely used while sprinting, allowing you to move at high speeds while still taking out potential threats.\n"
++ "Blink and Arrow Rain can be used to reposition closer or used as a dodge in a tight spot.\n"
++ "Laser Glaive will take out pairs of tough targets quickly as it bounces between the two.\n"
++ "Arrow Rain has extremely high damage output and also slows enemies inside, making it great for tough, fast enemies.";
+&nbsp;
+const banditSkills = [
+    { name:"Burst", desc:"Primary\n0.5 x5 Proc Coefficient\n0.3s Cooldown per shot", details:"Fire a shotgun burst for 5x100% damage. Can hold up to 4 shells." },
+    { name:"Serrated Dagger", desc:"Secondary\n1.0 Proc Coefficient\n4s Cooldown", details:"Lunge and slash for 360% damage. Critical Strikes also cause hemorrhaging." },
+    { name:"Smoke Bomb", desc:"Utility\n1.0 Proc Coefficient\n6s Cooldown", details:"Stunning. Deal 200% damage, become invisible, then deal 200% damage again." },
+    { name:"Lights Out", desc:"Special\n1.0 Proc Coefficient\n4s Cooldown", details:"Slayer. Fire a revolver shot for 600% damage. Kills reset all your cooldowns." },
+    { name:"Blast", desc:"Primary\n1.0 Proc Coefficient\n0.3s Cooldown per shot", details:"Fire a rifle blast for 330% damage. Can hold up to 4 bullets." },
+    { name:"Serrated Shiv", desc:"Secondary\n1.0 Proc Coefficient\n4s Cooldown", details:"Throw a hidden blade for 240% damage. Critical Strikes also cause hemorrhaging." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"Desperado", desc:"Special\n1.0 Proc Coefficient\n4s Cooldown", details:"Slayer. Fire a revolver shot for 600% damage. Kills grant stacking tokens for 10% more Desperado damage." },
+];
+&nbsp;
+const banditPassives = [
+    { name:"Backstab", desc:"All attacks from behind are Critical Strikes." },
+];
+&nbsp;
+const banditDesc = "The Bandit is a high-skill combo character that can dish out devastating backstabs while weaving in and out of stealth.\n"
++ "Your gun can be reloaded while in stealth if you can't afford the downtime, do it while hidden!\n"
++ "A successful reset on Lights Out can easily be the difference between life and death.\n"
++ "Backstab is an important part of the Bandit's kit to utilize, but can be risky against strong melee foes.\n"
++ "The bleed from Serrated Blade can stack, and getting resets on Lights Out against weak enemies can allow you to stack the bleed even higher on a boss.";
+&nbsp;
+const mulTSkills = [
+    { name:"Auto-Nailgun", desc:"Primary\n0.6 Proc Coefficient", details:"Rapidly fire nails for 70% damage. Finishes with a blast of 12 nails." },
+    { name:"Rebar Puncher", desc:"Primary\n1.0 Proc Coefficient", details:"Fire a piercing rebar that deals 600% damage." },
+    { name:"Scrap Launcher", desc:"Primary\n0.6 Proc Coefficient\n1.5s Cooldown", details:"Fire a rocket that explodes for 360% damage. Hold up to 4." },
+    { name:"Power-Saw", desc:"Primary\n1.0 Proc Coefficient", details:"Saw nearby enemies for 1000% damage per second." },
+    { name:"Blast Canister", desc:"Secondary\n1.0 Proc Coefficient\n6s Cooldown", details:"Stunning. Launch a canister for 220% damage. Drops stun bomblets for 5x44% damage." },
+    { name:"Transport Mode", desc:"Utility\n1.0 Proc Coefficient", details:"Heavy. Zoom forward, gaining 200 armor and 220% movement speed. Deals 250% damage to enemies." },
+    { name:"Retool", desc:"Special\n0.5s Cooldown", details:"Passively hold TWO equipment at once. Activating 'Retool' switches the active Equipment and MUL-T's primary attack." },
+    { name:"Power Mode", desc:"Special\n5s Cooldown", details:"Enter a heavy stance, equipping both your primary attacks at once. Gain 100 armor, but lose -60% movement speed." },
+];
+&nbsp;
+const mulTDesc= "MUL-T is an aggressive survivor who has the tools necessary for any job!\n"
++ "Auto-Nailgun has an extremely high damage output, but has a short range, making it risky but strong.\n"
++ "Transport Mode can be both a great tool to run down small groups of monsters, or pack a big punch against larger ones.\n"
++ "Blast Canister can lock down a large cluster of enemies for a long time, helping line up that perfect shot for both you and your allies.\n"
++ "Constantly Retooling can help eliminate fragile and weak enemies with Rebar Puncher while still keeping damage output high with Auto-Nailgun."
+&nbsp;
+const engineerSkills = [
+    { name:"Bouncing Grenades", desc:"Primary\n1.0 Proc Coefficient", details:"Charge up to 8 grenades that deal 100% damage each." },
+    { name:"Pressure Mines", desc:"Secondary\n1.0 Proc Coefficient\n8s Cooldown", details:"Place a two-stage mine that deals 300% damage, or 900% damage if fully armed. Can place up to 4." },
+    { name:"Bubble Shield", desc:"Utility\n25s Cooldown", details:"Place an impenetrable shield that blocks all incoming damage." },
+    { name:"TR12 Gauss Auto-Turret", desc:"Special\n1.0 Proc Coefficient\n30s Cooldown", details:"Place a turret that inherits all your items. Fires a cannon for 100% damage. Can place up to 2." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"Spider Mines", desc:"Secondary\n1.0 Proc Coefficient\n8s Cooldown", details:"Place a robot mine that deals 600% damage when an enemy walks nearby. Can place up to 4." },
+    { name:"Thermal Harpoons", desc:"Utility\n1.0 Proc Coefficient\n2.5s Cooldown", details:"Enter target painting mode to launch heat-seeking harpoons that deal 500% damage each. Can store up to 4." },
+    { name:"TR58 Carbonizer Turret", desc:"Special\n0.6 Proc Coefficient\n30s Cooldown", details:"Place a mobile turret that inherits all your items. Fires a laser for 200% damage per second that slows enemies. Can place up to 2." },
+];
+&nbsp;
+const engineerDesc = "The Engineer is a unique class that requires planning and positioning to be successful.\n"
++ "Placing mines ahead of time can help cover flanks and tight corridors.\n"
++ "The Engineer relies heavily on his Gauss Turrets - remember to place them in a location that is both safe and advantageous.\n"
++ "His Bubble Shield can be a powerful tool against heavily telegraphed boss attacks - and it can protect your allies as well!\n"
++ "Bouncing Grenades, while powerful, has a hard time hitting mobile targets. Try to keep your Turrets alive to deal with fast or flying monsters.";
+&nbsp;
+const artificerSkills = [
+    { name:"Flame Bolt", desc:"Primary\n1.0 Proc Coefficient\n1.3s Cooldown", details:"Ignite. Fire a bolt for 280% damage. Hold up to 4." },
+    { name:"Charged Nano-Bomb", desc:"Secondary\n1.0 Proc Coefficient\n5s Cooldown", details:"Stunning. Charge up a exploding nano-bomb that deals 400%-2000% damage." },
+    { name:"Snapfreeze", desc:"Utility\n1.0 x12 Proc Coefficient\n12s Cooldown", details:"Freezing. Create a barrier that hurts enemies for 100% damage." },
+    { name:"Flamethrower", desc:"Special\n1.0 x22+ Proc Coefficient\n5s Cooldown", details:"Ignite. Burn all enemies in front of you for 2000% damage." },
+    { name:"Plasma Bolt", desc:"Primary\n1.0 Proc Coefficient\n1.3s Cooldown", details:"Fire a bolt for 280% damage that explodes in a small area. Hold up to 4." },
+    { name:"Cast Nano-Spear", desc:"Secondary\n1.0 Proc Coefficient\n5s Cooldown", details:"Freezing. Charge up a piercing nano-spear that deals 400%-1200% damage." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"Ion Surge", desc:"Special\n1.0 Proc Coefficient\n8s Cooldown", details:"Stunning. Burst into the sky, dealing 800% damage." },
+];
+&nbsp;
+const artificerPassives = [
+    { name:"ENV Suit", desc:"Holding the Jump key causes the Artificer to hover in the air." },
+];
+&nbsp;
+const artificerDesc = "The Artificer is a high burst damage survivor who excels in fighting large groups and bosses alike.\n"
++ "Flame Bolt expends stocks quickly but recharges slowly - try to weave in basic attacks between skill casts.\n"
++ "Direct hits of Charged Nano-Bomb can turn the tide of an otherwise losing battle.\n"
++ "Frozen enemies are executed at low health, making it great to eliminate tanky enemies.\n"
++ "Remember that the Artificer has NO defensive skills - positioning and defensive items are key!\n";
+&nbsp;
+const mercenarySkills = [
+    { name:"Laser Sword", desc:"Primary\n1.0 Proc Coefficient", details:"Agile. Slice in front for 130% damage. Every 3rd hit strikes in a greater area and Exposes enemies." },
+    { name:"Whirlwind", desc:"Secondary\n1.0 x2 Proc Coefficient\n2.5s Cooldown", details:"Quickly slice horizontally twice, dealing 2x200% damage. If airborne, slice vertically instead." },
+    { name:"Blinding Assault", desc:"Utility\n1.0 Proc Coefficient\n8s Cooldown", details:"Stunning. Dash forward, dealing 300% damage. If you hit an enemy, you can dash again, up to 3 total." },
+    { name:"Eviscerate", desc:"Special\n1.0 x7+ Proc Coefficient\n6s Cooldown", details:"Target the nearest enemy, attacking them for 110% damage repeatedly. You cannot be hit for the duration." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"Rising Thunder", desc:"Secondary\n1.0 Proc Coefficient\n2.5s Cooldown", details:"Unleash a slicing uppercut, dealing 550% damage and sending you airborne." },
+    { name:"Focused Assault", desc:"Utility\n1.0 Proc Coefficient\n8s Cooldown", details:"Stunning. Dash forward, dealing 700% damage and Exposing enemies after 1 second." },
+    { name:"Slicing Winds", desc:"Special\n1.0 x8 Proc Coefficient\n6s Cooldown", details:"Fire a wind of blades that attack up to 3 enemies for 8x100% damage. The last hit Exposes enemies." },
+];
+&nbsp;
+const mercenaryPassives = [
+    { name:"Cybernetic Enhancements", desc:"The Mercenary can jump twice." },
+];
+&nbsp;
+const mercenaryDesc = "The Mercenary is a high skill melee survivor that uses his many dodges to weave in and out of combat.\n"
++ "Whirlwind's air variation can be used like an extra jump in a pinch.\n"
++ "Getting repeated resets on Blinding Assault is key to increasing both survivability and damage output. However, you do not always need to try for resets, it may result in your death.\n"
++ "Remember that Eviscerate is an extremely powerful defensive tool to dodge telegraphed attacks.\n"
++ "Laser Sword deals a ton of damage in a wide area, which is unique for a basic attack.";
+&nbsp;
+const rexSkills = [
+    { name:"DIRECTIVE: Inject", desc:"Primary\n0.5 x3 Proc Coefficient", details:"Fire 3 syringes for 3x80% damage. The last syringe Weakens and heals for 60% of damage dealt." },
+    { name:"Seed Barrage", desc:"Secondary\n1.0 Proc Coefficient\n0.5s Cooldown", details:"Lose 15% HP. Launch a mortar into the sky for 450% damage." },
+    { name:"DIRECTIVE: Disperse", desc:"Utility\n0.0 Proc Coefficient\n5.5s Cooldown", details:"Fire a Sonic Boom that Weakens all enemies hit." },
+    { name:"Tangling Growth", desc:"Special\n1.0 Proc Coefficient\n12s Cooldown", details:"25% HP. Fire a flower that roots for 200% damage. Heals for every target hit." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"DIRECTIVE: Drill", desc:"Secondary\n0.5 x16 Proc Coefficient\n6s Cooldown", details:"Launch a series of seed bullets into the sky, raining down for 450% damage per second." },
+    { name:"Bramble Volley", desc:"Utility\n0.5 Proc Coefficient\n5.5s Cooldown", details:"20% HP. Fire a Sonic Boom that damages enemies for 550% damage. Heals for every target hit." },
+    { name:"DIRECTIVE: Harvest", desc:"Special\n1.0 Proc Coefficient\n6s Cooldown", details:"Fire a bolt that deals 330% damage and injects an enemy. On death, drop multiple healing fruits that heal for 25% HP." },
+];
+&nbsp;
+const rexPassives = [
+    { name:"Natural Toxins", desc:"Certain attacks Weaken enemies hit, reducing their movement speed, armor, and damage." },
+];
+&nbsp;
+const rexDesc = "REX is a half robot / half plant that uses HP to cast devastating skills from a distance. The plant nor the robot could survive this planet alone, but thankfully they have each other.\n"
++ "Natural Toxins is important to reducing the strength of strong enemies for both you and your allies.\n"
++ "Seed Barrage can be used from any range and has a very low cooldown. Just make sure to watch your HP!\n"
++ "DIRECTIVE: Disperse can be used to knock enemies away. It can also push flying monsters into walls to kill them.\n"
++ "A well-aimed Tangling Growth can keep REX in the fight forever. Rooting multiple monsters will guarantee you recover the initial HP costs.";
+&nbsp;
+const loaderSkills = [
+    { name:"Knuckleboom", desc:"Primary\n1.0 Proc Coefficient", details:"Swing at nearby enemies for 320% damage." },
+    { name:"Grapple Fist", desc:"Secondary\n1.0 Proc Coefficient\n5s Cooldown", details:"Fire your gauntlet forward, pulling you to the target." },
+    { name:"Charged Gauntlet", desc:"Utility\n1.0 Proc Coefficient\n5s Cooldown", details:"Heavy. Charge up a piercing punch for 600%-2700% damage." },
+    { name:"M551 Pylon", desc:"Special\n0.5 Proc Coefficient\n20s Cooldown", details:"Throw a floating pylon that zaps up to 6 nearby enemies for 100% damage. Can be grappled." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"Spiked Fist", desc:"Secondary\n1.0 Proc Coefficient\n5s Cooldown", details:"Stunning. Fire your gauntlet forward, dealing 320% damage. Pulls you to heavy targets. Light targets are pulled to YOU instead." },
+    { name:"Thunder Gauntlet", desc:"Utility\n0.5 Proc Coefficient\n5.5s Cooldown", details:"Heavy. Charge up a single-target punch for 2100% damage that shocks enemies in a cone for 1000% damage." },
+    { name:"Thunderslam", desc:"Special\n1.0 Proc Coefficient\n8s Cooldown", details:"Stunning. Slam your fists down, dealing 2000% damage on impact." },
+];
+&nbsp;
+const loaderPassives = [
+    { name:"Scrap Barrier", desc:"The Loader is immune to fall damage. Striking enemies with the Loader's gauntlets grants a temporary barrier." },
+];
+&nbsp;
+const loaderDesc = "The Loader is a slow but powerful bruiser that can use her grappling hook to uniquely navigate the environment.\n"
++ "Scrap Barrier allows Loader to remain in the fight, as long as you're still punching.\n"
++ "Grapple Fist can be used to traverse quickly, dodge enemy attacks, or increase your speed for a massive Charged Gauntlet damage boost!\n"
++ "Charged Gauntlet can be used for both gap closing and as a powerful finishing move to nearby enemies.\n"
++ "Remember that M551 Pylon can be used as a grapple point for both you and any allied Loaders.";
+&nbsp;
+const acridSkills = [
+    { name:"Vicious Wounds", desc:"Primary\n1.0 Proc Coefficient", details:"Maul an enemy for 200% damage. Every 3rd hit is Regenerative and deals 400% damage." },
+    { name:"Neurotoxin", desc:"Secondary\n1.0 Proc Coefficient\n2s Cooldown", details:"Poisonous. Spit toxic bile for 240% damage." },
+    { name:"Caustic Leap", desc:"Utility\n1.0 Proc Coefficient\n6s Cooldown", details:"Poisonous. Stunning. Leap in the air, dealing 320% damage. Leave acid that deals 25% damage. Has 2 charges." },
+    { name:"Epidemic", desc:"Special\n1.0 Proc Coefficient\n10s Cooldown", details:"Poisonous. Release a deadly disease that deals 100% damage. The disease spreads to up to 20 targets." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"Ravenous Bite", desc:"Secondary\n1.0 Proc Coefficient\n2s Cooldown", details:"Poisonous. Slayer. Regenerative. Bite an enemy for 320% damage." },
+    { name:"Frenzied Leap", desc:"Utility\n1.0 Proc Coefficient\n10s Cooldown", details:"Stunning. Leap in the air, dealing 550% damage. Reduce the cooldown by 2s for every enemy hit." },
+    { name:"N/A", desc:"", details:"" },
+];
+&nbsp;
+const acridPassives = [
+    { name:"Poison", desc:"Poisonous attacks apply a powerful damage over time effect." },
+    { name:"Blight", desc:"Poisonous attacks apply stacking Blight instead." },
+];
+&nbsp;
+const acridDesc = "Acrid is a melee-range hybrid who uses powerful poisons to melt tanky enemies.\n"
++ "Poison is an extremely powerful DoT - make sure to apply it as often as possible!\n"
++ "Poison leaves enemies at 1 HP, so prioritize items and drones that help you finish them off.\n"
++ "Because Acrid has no natural defenses, hit-and-run tactics can help you stay alive.\n"
++ "Neurotoxin's low cooldown can help Acrid function as a ranged character in a pinch.";
+&nbsp;
+const captainSkills = [
+    { name:"Vulcan Shotgun", desc:"Primary\n0.75 x8 Proc Coefficient", details:"Fire a blast of pellets that deal 8x120% damage. Charging the attack narrows the spread." },
+    { name:"Power Tazer", desc:"Secondary\n1.0 Proc Coefficient\n6s Cooldown", details:"Shocking. Fire a fast tazer that deals 100% damage. Travels farther if bounced." },
+    { name:"Orbital Probe", desc:"Utility\n1.0 Proc Coefficient\n11s Cooldown", details:"Stunning. Request up to 3 Orbital Probes from the UES Safe Travels. Each probe deals 1000% damage. " },
+    { name:"Orbital Supply Beacon", desc:"Special\n0.0 Proc Coefficient", details:"Request a permanent Supply Beacon. Can only be requested twice per stage." },
+    { name:"Beacon: Healing", desc:"Special\nSupply Beacon", details:"Heal all nearby allies for 10% of their maximum health every second." },
+    { name:"Beacon: Shocking", desc:"Special\nSupply Beacon", details:"Periodically Shock all nearby enemies, immobilizing them." },
+    { name:"Beacon: Resupply", desc:"Special\nSupply Beacon", details:"Recharge Equipment on use." },
+    { name:"Beacon: Hacking", desc:"Special\nSupply Beacon", details:"Hack all nearby purchasables to a cost of $0 over time." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"N/A", desc:"", details:"" },
+    { name:"OGM-72 'DIABLO' Strike", desc:"Utility\n1.0 Proc Coefficient\n40s Cooldown", details:"Stunning. Request a kinetic strike from the UES Safe Travels. After 20 seconds, it deals 40,000% damage to ALL characters." },
+    { name:"N/A", desc:"", details:"" },
+];
+&nbsp;
+const captainPassives = [
+    { name:"Defensive Microbots", desc:"Passively gain Microbots that shoot down nearby enemy projectiles. Drones are also given Microbots." },
+];
+&nbsp;
+const captainDesc = "The Captain is a unique survivor that can control the battlefield with utility and damage - with help from the UES Safe Travels.\n"
++ "Vulcan Shotgun can be used as both a long-range rifle and as a short-range shotgun. Make sure to charge it for the appropriate distance!\n"
++ "Defensive Microbots can be a unique, powerful way to scale the defensive capabilities of both you and your team.\n"
++ "Power Tazer can be used to lock down a strong Elite foe while you deal with fodder.\n"
++ "Orbital Supply Beacon can only be used twice per stage, but make sure you don't hold onto it too long!";
+&nbsp;
+const railgunnerSkills = [
+    { name:"XQR Smart Round System", desc:"Primary\n1.0 Proc Coefficient", details:"Fire aggressive tracking rounds for 100% damage." },
+    { name:"M99 Sniper", desc:"Secondary\n1.0 Proc Coefficient", details:"Activate your long-range scope, highlighting Weak Points and transforming your weapon into a piercing 1000% damage railgun." },
+    { name:"Concussion Device", desc:"Utility\n0.0 Proc Coefficient\n6s Cooldown", details:"Throw out a device that pushes you and all nearby enemies away. Can hold up to 2." },
+    { name:"Supercharge", desc:"Special\n3.0 Proc Coefficient\n15s Cooldown", details:"Fire a piercing round for 4000% damage and 150% Weak Point damage. Afterwards, all your weapons are disabled for 5 seconds." },
+    { name:"N/A", desc:"", details:"" },
+    { name:"HH44 Marksman", desc:"Secondary\n1.0 Proc Coefficient\n", details:"Activate your short-range scope, highlighting Weak Points and transforming your weapon into a quick 400% damage railgun." },
+    { name:"Polar Field Device", desc:"Utility\n0.0 Proc Coefficient\n12s Cooldown", details:"Throw out a device that slows down all nearby enemies and projectiles." },
+    { name:"Cryocharge", desc:"Special\n1.5 Proc Coefficient\n15s Cooldown", details:"Freezing. Fire a piercing round for 2000% damage" },
+];
+&nbsp;
+const railgunnerPassives = [
+    { name:"Magnetic Accelerator", desc:"All Critical Strike Chance is converted into Critical Strike Damage." },
+];
+&nbsp;
+const railgunnerDesc = "The Railgunner is a long-range, single target survivor that can instantly kill any high priority target - and from any range.\n"
++ "While she can deal easily with bosses, she can become easily swarmed by small enemies. Try to prioritize area-of-effect items!\n"
++ "Landing your active reload both speeds up your reload timer while buffing your next railgun shot.\n"
++ "XQR Smart Rounds is a great way to clean up small fodder, or to shoot around corners.\n"
++ "Remember that if you use Supercharge, you are incredibly vulnerable while rebooting your systems. Make that shot count!";
+&nbsp;
+const voidfiendSkills = [
+    { name:"Drown", desc:"Primary\n1.0 Proc Coefficient", details:"Fire a slowing long-range beam for 300% damage." },
+    { name:"Flood", desc:"Secondary\n1.0 Proc Coefficient\n4s Cooldown", details:"Fire a plasma missile for 600% damage. Fully charge it for an explosive plasma ball instead, dealing 1100% damage." },
+    { name:"Trespass", desc:"Utility\n5s Cooldown", details:"Disappear into the Void, cleansing all debuffs while moving in an upward arc." },
+    { name:"Suppress", desc:"Special", details:"Crush 25% Corruption to heal yourself for 25% maximum health." },
+    { name:"Corrupted Drown", desc:"Primary\n0.625 Proc Coefficient", details:"Fire a short-range beam for 2000% damage." },
+    { name:"Corrupted Flood", desc:"Secondary\n1.0 Proc Coefficient\n4s Cooldown", details:"Fire a an arcing plasma bomb for 1100% damage." },
+    { name:"Corrupted Trespass", desc:"Utility\n5s Cooldown", details:"Disappear into the Void, cleansing all debuffs while moving at a fast forward angle." },
+    { name:"Corrupted Suppress", desc:"Special", details:"Crush 25% maximum health to gain 25% Corruption." },
+];
+&nbsp;
+const voidfiendPassives = [
+    { name:"Void Corruption", desc:"At full Corruption, transform your abilities into more aggressive forms." },
+];
+&nbsp;
+const voidfiendDesc = "The Void Fiend is a corrupted survivor that fluctuates between a controlled and corrupted form, each with different strengths and weaknesses.  Managing this curse has become its fate.\n"
++ "Void Corruption consumes you over time. Be sure to manage your health and corruption to be in the right place at the right time! Healing alters the flow of corruption within your body.\n"
++ "Drown's range varies greatly between your forms, be prepared to close the gap if you get corrupted, and to retreat if your corruption is wearing thin.\n"
++ "Flood can be charged in your base form to greater effect.  Take advantage of its instantaneous blast in your corrupt form!\n"
++ "Suppress can be used to maintain time in your current form.  Be mindful of items that alter this move's potential."
+&nbsp;
+const skillCards = (skills) =&gt; {
+    return skills.map((skill) =&gt; {
+        return {
+            size:"w-72 min-h-48 max-h-96",
+            text:`${skill.name}`,
+            imageSrc:`skills/${skill.name.replaceAll(' ', '_').replaceAll(':', '')}.webp`,
+            desc:`${skill.desc}`,
+            details:`${skill.details}`
+        }
+    })
+}
+&nbsp;
+const passiveCards = (passives) =&gt; {
+    return passives.map((passive) =&gt; {
+        return {
+            size:"w-72 min-h-48 max-h-64",
+            text: `${passive.name}`,
+            imageSrc:`skills/${passive.name.replaceAll(' ', '_')}.webp`,
+            desc:`${passive.desc}`,
+        }
+    })
+}
+&nbsp;
+const SurvivorsPage = () =&gt; {
+    return ( 
+        &lt;&gt;
+            &lt;Subheader title="Survivors"/&gt;
+            &lt;div className="SurvivorList flex justify-around flex-wrap"&gt;
+                &lt;Survivor name="Commando" unlock="Unlocked by default." skills={skillCards(commandoSkills)} desc={commandoDesc}/&gt;
+                &lt;Survivor name="Huntress" unlock="Unlocked by default." skills={skillCards(huntressSkills)} desc={huntressDesc}/&gt;
+                &lt;Survivor name="Bandit" unlock="Reach and complete the 3rd Teleporter event without dying." skills={skillCards(banditSkills)} desc={banditDesc} passives={passiveCards(banditPassives)}/&gt;
+                &lt;Survivor name="MUL-T" unlock="Complete the first Teleporter event 5 times." skills={skillCards(mulTSkills)} desc={mulTDesc}/&gt;
+                &lt;Survivor name="Engineer" unlock="Complete 30 stages." skills={skillCards(engineerSkills)} desc={engineerDesc}/&gt;
+                &lt;Survivor name="Artificer" unlock="Pay 10 Lunar Coins in the Bazaar Between Time." skills={skillCards(artificerSkills)} desc={artificerDesc} passives={passiveCards(artificerPassives)} /&gt;
+                &lt;Survivor name="Mercenary" unlock="Obliterate yourself at the Obelisk in A Moment, Fractured." skills={skillCards(mercenarySkills)} desc={mercenaryDesc} passives={passiveCards(mercenaryPassives)}/&gt;
+                &lt;Survivor name="Rex" unlock="Repair the broken robot on Abyssal Depths with an Escape Pod's Fuel Array." skills={skillCards(rexSkills)} desc={rexDesc} passives={passiveCards(rexPassives)}/&gt;
+                &lt;Survivor name="Loader" unlock="Defeat the Alloy Worship Unit on Siren's Call." skills={skillCards(loaderSkills)} desc={loaderDesc} passives={passiveCards(loaderPassives)}/&gt;
+                &lt;Survivor name="Acrid" unlock="Stabilize the cells in the Void Fields." skills={skillCards(acridSkills)} desc={acridDesc} passives={passiveCards(acridPassives)}/&gt;
+                &lt;Survivor name="Captain" unlock="Defeat the final boss." skills={skillCards(captainSkills)} desc={captainDesc} passives={passiveCards(captainPassives)}/&gt;
+                &lt;Survivor name="Railgunner" unlock="Unlocked by default in Survivors of the Void DLC." skills={skillCards(railgunnerSkills)} desc={railgunnerDesc} passives={passiveCards(railgunnerPassives)}/&gt;
+                &lt;Survivor name="Void Fiend" unlock="Escape the Planetarium in Survivors of the Void DLC." skills={skillCards(voidfiendSkills)} desc={voidfiendDesc} passives={passiveCards(voidfiendPassives)}/&gt;
+            &lt;/div&gt;
+        &lt;/&gt;
+    );
+}
+ 
+export default SurvivorsPage;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2024-03-15T06:01:35.854Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    

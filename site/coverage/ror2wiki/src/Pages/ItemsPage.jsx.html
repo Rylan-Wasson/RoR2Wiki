@@ -1,0 +1,727 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for ror2wiki/src/Pages/ItemsPage.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">ror2wiki/src/Pages</a> ItemsPage.jsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>215/215</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>15/15</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>215/215</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">224x</span>
+<span class="cline-any cline-yes">162x</span>
+<span class="cline-any cline-yes">106x</span>
+<span class="cline-any cline-yes">74x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">282x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import CardList from "../components/CardList";
+import Subheader from "../components/Subheader";
+&nbsp;
+const common_items = [
+    { name: "Armor-Piercing Rounds", desc: "Deal an additional 20% damage (+20% per stack) to bosses.", details: "Common / Damage / Linear" },
+    { name: "Backup Magazine", desc: "Add +1 (+1 per stack) charge of your Secondary skill.", details: "Common / Utility / Linear" },
+    { name: "Bison Steak", desc: "Increases maximum health by 25 (+25 per stack).", details: "Common / Healing / Linear", },
+    { name: "Bundle of Fireworks", desc: "Activating an interactable launches 8 (+4 per stack) fireworks that deal 300% base damage.", details: "Common / Damage / Linear", },
+    { name: "Bustling Fungus", desc: "After standing still for 1 second, create a zone that heals for 4.5% (+2.25% per stack) of your health every second to all allies within 3m (+1.5m per stack).", details: "Common / Healing / Linear", },
+    { name: "Cautious Slug", desc: "Increases base health regeneration by +3 hp/s (+3 hp/s per stack) while outside of combat.", details: "Common / Healing / Linear", },
+    { name: "Crowbar", desc: "Deal +75% (+75% per stack) damage to enemies above 90% health.", details: "Crowbar / Damage / Linear", },
+    { name: "Delicate Watch", desc: "Increase damage by 20% (+20% per stack). Taking damage to below 25% health breaks this item. ", details: "Common / Damage / Linear", },
+    { name: "Energy Drink", desc: "Sprint speed is improved by 25% (+25% per stack).", details: "Common / Utility / Linear", },
+    { name: "Focus Crystal", desc: "Increase damage to enemies within 13m by 20% (+20% per stack).", details: "Common / Damage / Linear", },
+    { name: "Gasoline", desc: "Killing an enemy ignites all enemies within 12m (+4m per stack) for 150% base damage. Additionally, enemies burn for 150% (+75% per stack) base damage.", details: "Common / Damage / Linear", },
+    { name: "Item Scrap, White", desc: "Does nothing. Prioritized when used with 3D Printers.", details: "Common / Scrap / N/A", },
+    { name: "Lens-Maker's Glasses", desc: "Your attacks have a 10% (+10% per stack) chance to 'Critically Strike', dealing double damage.", details: "Common / Damage / Linear" },
+    { name: "Medkit", desc: "2 seconds after getting hurt, heal for 20 plus an additional 5% (+5% per stack) of maximum health.", details: "Common / Healing / Linear", },
+    { name: "Mocha", desc: "Increases attack speed by 7.5% (+7.5 per stack) and movement speed by 7% (+7% per stack). ", details: "Common / Damage &amp; Utility / Linear", },
+    { name: "Monster Tooth", desc: "Killing an enemy spawns a healing orb that heals for 8 plus an additional 2% (+2% per stack) of maximum health. ", details: "Common / Healing / Linear", },
+    { name: "Oddly-Shaped Opal", desc: "Increase armor by 100 (+100 per stack) while out of danger.", details: "Common / Utility / Linear", },
+    { name: "Paul's Goat Hoof", desc: "Increases movement speed by 14% (+14% per stack).", details: "Common / Utility / Linear", },
+    { name: "Personal Shield Generator", desc: "Gain a shield equal to 8% (+8% per stack) of your maximum health. Recharges outside of danger.", details: "Common / Utility / Linear", },
+    { name: "Power Elixir", desc: "Taking damage to below 25% health consumes this item, healing you for 75% of maximum health.", details: "Common / Healing / N/A", },
+    { name: "Repulsion Armor Plate", desc: "Reduce all incoming damage by 5 (+5 per stack). Cannot be reduced below 1.", details: "Common / Utility / Linear", },
+    { name: "Roll of Pennies", desc: "Gain 3 (+3 per stack) gold on taking damage from an enemy. Scales over time.", details: "Common / Utility / Linear", },
+    { name: "Rusted Key", desc: "A hidden cache containing an item (80%/20%) will appear in a random location on each stage. Opening the cache consumes this item.", details: "Common / Utility / N/A", },
+    { name: "Soldier's Syringe", desc: "Increases attack speed by 15% (+15% per stack).", details: "Common / Damage / Linear", },
+    { name: "Sticky Bomb", desc: "5% (+5% per stack) chance on hit to attach a bomb to an enemy, detonating for 180% TOTAL damage.", details: "Common / Damage / Linear", },
+    { name: "Stun Grenade", desc: "5% (+5% on stack) chance on hit to stun enemies for 2 seconds.", details: "Common / Utility / Hyperbolic", },
+    { name: "Topaz Brooch", desc: "Gain a temporary barrier on kill for 15 health (+15 per stack).", details: "Common / Healing / Linear", },
+    { name: "Tougher Times", desc: "15% (+15% per stack) chance to block incoming damage. Unaffected by luck.", details: "Common / Utility / Hyperbolic", },
+    { name: "Tri-Tip Dagger", desc: "10% (+10% per stack) chance to bleed an enemy for 240% base damage.", details: "Common / Damage / Linear", },
+    { name: "Warbanner", desc: "On level up or starting the Teleporter event, drop a banner that strengthens all allies within 16m (+8m per stack). Raise attack and movement speed by 30%.", details: "Common / Utility / Linear", },
+]
+&nbsp;
+const uncommon_items = [
+    { name: "AtG Missile Mk. 1", desc: "10% chance to fire a missile that deals 300% (+300% per stack) TOTAL damage.", details: "Uncommon / Damage / Linear" },
+    { name: "Bandolier", desc: "18% (+10% per stack) chance on kill to drop an ammo pack that resets all skill cooldowns.", details: "Uncommon / Utility / Hyperbolic" },
+    { name: "Berzerker's Pauldron", desc: "Killing 4 enemies within 1 second sends you into a frenzy for 6s (+4s per stack). Increases movement speed by 50% and attack speed by 100%.", details: "Uncommon / Damage &amp; Utility / Linear" },
+    { name: "Chronobauble", desc: "Slow enemies on hit for -60% movement speed for 2s (+2s per stack).", details: "Uncommon / Utility / Linear" },
+    { name: "Death Mark", desc: "Enemies with 4 or more debuffs are marked for death, increasing damage taken by 50% from all sources for 7 (+7 per stack) seconds.", details: "Uncommon / Damage / Linear" },
+    { name: "Fuel Cell", desc: "Hold an additional equipment charge (+1 per stack). Reduce equipment cooldown by 15% (+15% per stack).", details: "Uncommon / Utility / Linear" },
+    { name: "Ghor's Tome", desc: "4% (+4% on stack) chance on kill to drop a treasure worth $25. Scales over time.", details: "Uncommon / Utility / Linear" },
+    { name: "Harvester's Scythe", desc: "Gain 5% critical chance. Critical strikes heal for 8 (+4 per stack) health.", details: "Uncommon / Healing / Linear" },
+    { name: "Hopoo Feather", desc: "Gain +1 (+1 per stack) maximum jump count.", details: "Uncommon / Utility / Linear" },
+    { name: "Hunter's Harpoon", desc: "Killing an enemy increases movement speed by 125%, fading over 1 (+0.5 per stack) seconds.", details: "Uncommon / Utility / Linear" },
+    { name: "Ignition Tank", desc: "Ignite effects deal +300% (+300% per stack) more damage over time.", details: "Uncommon / Damage / Linear" },
+    { name: "Infusion", desc: "Killing an enemy increases your health permanently by 1 (+1 per stack), up to a maximum of 100 (+100 per stack) health.", details: "Uncommon / Healing / Linear" },
+    { name: "Item Scrap, Green", desc: "Does nothing. Prioritized when used with 3D Printers.", details: "Uncommon / Scrap / N/A" },
+    { name: "Kjaro's Band", desc: "Hits that deal more than 400% damage also blasts enemies with a runic flame tornado, dealing 300% (+300% per stack) TOTAL damage over time. 10 second cooldown.", details: "Uncommon / Damage / Linear" },
+    { name: "Leeching Seed", desc: "Dealing damage heals you for 1 (+1 per stack) health.", details: "Uncommon / Healing / Linear" },
+    { name: "Lepton Daisy", desc: "Release a healing nova during the Teleporter event, healing all nearby allies for 50% of their maximum health. Occurs 1 (+1 per stack) times.", details: "Uncommon / Healing / Linear" },
+    { name: "Old Guillotine", desc: "Instantly kill Elite monsters below 13% (+13% per stack) health.", details: "Uncommon / Damage / Hyperbolic" },
+    { name: "Old War Stealthkit", desc: "Falling below 25% health causes you to gain 40% movement speed and invisibility for 5s. Recharges every 30 seconds (-50% per stack).", details: "Uncommon / Utility / Exponential" },
+    { name: "Predatory Instincts", desc: "Gain 5% critical chance. Critical strikes increase attack speed by 12%. Maximum cap of 36% (+24% per stack) attack speed.", details: "Uncommon / Damage / Linear" },
+    { name: "Razorwire", desc: "Getting hit causes you to explode in a burst of razors, dealing 160% damage. Hits up to 5 (+2 per stack) targets in a 25m (+10m per stack) radius", details: "Uncommon / Damage / Linear" },
+    { name: "Red Whip", desc: "Leaving combat boosts your movement speed by 30% (+30% per stack).", details: "Uncommon / Utility / Linear" },
+    { name: "Regenerating Scrap", desc: "Does nothing. Prioritized when used with Uncommon 3D Printers. At the start of each stage, it regenerates.", details: "Uncommon / Scrap / N/A" },
+    { name: "Rose Buckler", desc: "Increase armor by 30 (+30 per stack) while sprinting.", details: "Uncommon / Utility / Linear" },
+    { name: "Runald's Band", desc: "Hits that deal more than 400% damage also blasts enemies with a runic ice blast, slowing them by 80% for 3s (+3s per stack) and dealing 250% (+250% per stack) TOTAL damage. 10 second cooldown.", details: "Uncommon / Damage / Linear" },
+    { name: "Shipping Request Form", desc: "A delivery containing 2 items (79%/20%/1%) will appear in a random location on each stage. (Increases rarity chances of the items per stack).", details: "Uncommon / Utility / Special" },
+    { name: "Shuriken", desc: "Activating your Primary skill also throws a shuriken that deals 400% (+100% per stack) base damage. You can hold up to 3 (+1 per stack) shurikens. Reload over 10 seconds.", details: "Uncommon / Damage / Linear" },
+    { name: "Squid Polyp", desc: "Activating an interactable summons a Squid Turret that attacks nearby enemies at 100% (+100% per stack) attack speed. Lasts 30 seconds.", details: "Uncommon / Damage / Linear" },
+    { name: "Ukulele", desc: "25% chance to fire chain lightning for 80% TOTAL damage on up to 3 (+2 per stack) targets within 20m (+2m per stack).", details: "Uncommon / Damage / Linear" },
+    { name: "War Horn", desc: "Activating your Equipment gives you +70% attack speed for 8s (+4s per stack).", details: "Uncommon / Damage / Linear" },
+    { name: "Wax Quail", desc: "Jumping while sprinting boosts you forward by 10m (+10m per stack).", details: "Uncommon / Utility / Linear" },
+    { name: "Will-o'-the-wisp", desc: "On killing an enemy, spawn a lava pillar in a 12m (+2.4m per stack) radius for 350% (+280% per stack) base damage.", details: "Uncommon / Damage / Linear" },
+]
+&nbsp;
+const legendary_items = [
+    { name: "57 Leaf Clover", desc: "All random effects are rolled +1 (+1 per stack) times for a favorable outcome.", details: "Legendary / Utility / Linear" },
+    { name: "Aegis", desc: "Healing past full grants you a temporary barrier for 50% (+50% per stack) of the amount you healed.", details: "Legendary / Healing / Linear" },
+    { name: "Alien Head", desc: "Reduce skill cooldowns by 25% (+25% per stack).", details: "Legendary / Utility / Exponential" },
+    { name: "Ben's Raincoat", desc: "Prevents 1 (+1 per stack) debuff and instead grants a temporary barrier for 10% of maximum health. Recharges every 5 seconds.", details: "Legendary / Healing / Linear" },
+    { name: "Bottled Chaos", desc: "Trigger a random equipment effect 1 (+1 per stack) time(s).", details: "Legendary / Utility / Linear" },
+    { name: "Brainstalks", desc: "Upon killing an elite monster, enter a frenzy for 4s (+4s per stack) where skills have 0.5s cooldowns.", details: "Legendary / Utility / Linear" },
+    { name: "Brilliant Behemoth", desc: "All your attacks explode in a 4m (+2.5m per stack) radius for a bonus 60% TOTAL damage to nearby enemies.", details: "Legendary / Damage / Linear" },
+    { name: "Ceremonial Dagger", desc: "Killing an enemy fires out 3 homing daggers that deal 150% (+150% per stack) base damage.", details: "Legendary / Damage / Linear" },
+    { name: "Defensive Microbots", desc: "Shoot down 1 (+1 per stack) projectiles within 20m every 0.5 seconds. Recharge rate scales with attack speed.", details: "Legendary / Utility / Linear" },
+    { name: "Dio's Best Friend", desc: "Upon death, this item will be consumed and you will return to life with 3 seconds of invulnerability.", details: "Legendary / Utility / Linear" },
+    { name: "Frost Relic", desc: "Killing an enemy surrounds you with an ice storm that deals 1200% damage per second and slows enemies by 80% for 1.5s. The storm grows by 2m with every kill. Stacks up to 18m (+12m per stack).", details: "Legendary / Damage / Linear" },
+    { name: "H3AD-5T v2", desc: "Increase jump height. Creates a 5m-100m radius kinetic explosion on hitting the ground, dealing 1000%-10000% base damage that scales up with fall distance. Recharges in 10 (-50% per stack) seconds.", details: "Legendary / Utility / Hyperbolic" },
+    { name: "Happiest Mask", desc: "Killing enemies has a 7% chance to spawn a ghost of the killed enemy with 1500% damage. Lasts 30s (+30s per stack).", details: "Legendary / Utility / Linear" },
+    { name: "Hardlight Afterburner", desc: "Add +2 (+2 per stack) charges of your Utility skill. Reduces Utility skill cooldown by 33%.", details: "Legendary / Utility / Linear" },
+    { name: "Interstellar Desk Plant", desc: "On kill, plant a healing fruit seed that grows into a plant after 5 seconds. The plant heals for 5% of maximum health every 0.5 second to all allies within 10m (+5.0m per stack). Lasts 10 seconds. ", details: "Legendary / Utility / Linear" },
+    { name: "Item Scrap, Red", desc: "Does nothing. Prioritized when used with 3D Printers.", details: "Legendary / Scrap / N/A" },
+    { name: "Laser Scope", desc: "Critical Strikes deal an additional 100% damage (+100% per stack).", details: "Legendary / Damage / Linear" },
+    { name: "N'kuhana's Opinion", desc: "Store 100% (+100% per stack) of healing as Soul Energy. After your Soul Energy reaches 10% of your maximum health, fire a skull that deals 250% of your Soul Energy as damage.", details: "Legendary / Damage / Linear" },
+    { name: "Pocket I.C.B.M.", desc: "All missile items and equipment fire an additional 2 missiles. Increase missile damage by 0% (+50% per stack)", details: "Legendary / Damage / Linear" },
+    { name: "Rejuvenation Rack", desc: "Heal +100% (+100% per stack) more.", details: "Legendary / Healing / Linear" },
+    { name: "Resonance Disc", desc: "Killing 4 enemies in 7 seconds charges the Resonance Disc. The disc launches itself toward a target for 300% base damage (+300% per stack), and then explodes for 1000% base damage (+1000% per stack).", details: "Legendary / Damage / Linear" },
+    { name: "Sentient Meat Hook", desc: "20% (+20% per stack) chance on hit to fire homing hooks at up to 10 (+5 per stack) enemies for 100% TOTAL damage.", details: "Legendary / Damage / Linear" },
+    { name: "Shattering Justice", desc: "After hitting an enemy 5 times, reduce their armor by 60 for 8 (+8 per stack) seconds.", details: "Legendary / Damage / Linear" },
+    { name: "Soulbound Catalyst", desc: "Kills reduce equipment cooldown by 4s (+2s per stack).", details: "Legendary / Utility / Linear" },
+    { name: "Spare Drone Parts", desc: "Gain Col. Droneman. Your drones fire faster, have less cooldowns, shoot missiles, and gain a bonus chaingun.", details: "Legendary / Damage / Linear" },
+    { name: "Symbiotic Scorpion", desc: "100% chance on hit to reduce armor by 2 (+2 per stack) permanently.", details: "Legendary / Damage / Linear" },
+    { name: "Unstable Tesla Coil", desc: "Fire out lightning that hits 3 (+2 per stack) enemies for 200% base damage every 0.5s. The Tesla Coil switches off every 10 seconds.", details: "Legendary / Damage / Linear" },
+    { name: "Wake of Vultures", desc: "Gain the power of any killed elite monster for 8s (+5s per stack).", details: "Legendary / Utility / Linear" },
+]
+&nbsp;
+const boss_items = [
+    { name: "Charged Perforator", desc: "10% chance on hit to down a lightning strike, dealing 500% (+500% per stack) damage.\nDrops From Overloading Worm.", details: "Boss / Damage / Linear" },
+    { name: "Defense Nucleus", desc: "Killing elite monsters spawns an Alpha Construct with bonus 300% damage and 300% health. Limited to 4 (+4 per stack).\nDrops From Xi Construct.", details: "Boss / Damage / Linear" },
+    { name: "Empathy Cores", desc: "Every 30 seconds, summon two Solus Probes that gain +100% (+100% per stack) damage per ally on your team.\nDrops from Solus Control Unit.", details: "Boss / Damage / Linear" },
+    { name: "Genesis Loop", desc: "Falling below 25% health causes you to explode, dealing 6000% base damage. Recharges every 30 / (2 +1 per stack) seconds .\nDrops From Wandering Vagrant.", details: "Boss / Damage / Linear" },
+    { name: "Halcyon Seed", desc: "Summon Aurelionite during the teleporter event. It has 100% (+50% per stack) damage and 100% (+100% per stack) health.\nDrops From Aurelionite.", details: "Boss / Damage / Linear" },
+    { name: "Little Disciple", desc: "Fire a tracking wisp for 300% (+300% per stack) damage. Fires every 1.6 seconds while sprinting. Fire rate increases with movement speed.\nDrops From Grovetender.", details: "Boss / Damage / Linear" },
+    { name: "Mired Urn", desc: "While in combat, the nearest 1 (+1 per stack) enemies to you within 13m will be 'tethered' to you, dealing 100% damage per second and healing you for 100% of the damage dealt.\nDrops From Clay Dunestrider.", details: "Boss / Damage &amp; Healing / Linear" },
+    { name: "Molten Perforator", desc: "10% chance on hit to call forth 3 magma balls from an enemy, dealing 300% (+300% per stack) damage each.\nDrops From Magma Worm.", details: "Boss / Damage / Linear" },
+    { name: "Planula", desc: "Heal from incoming damage for 15 (+15 per stack).\nDrops From Grandparent.", details: "Boss / Healing / Linear" },
+    { name: "Queen's Gland", desc: "Every 30 seconds, summon a Beetle Guard with bonus 300% damage and 100% health. Can have up to 1 (+1 per stack) Guards at a time.\nDrops From Beetle Queen.", details: "Boss / Damage / Linear" },
+    { name: "Shatterspleen", desc: "Gain 5% critical chance. Critical Strikes bleed enemies. Bleeding enemies explode on death for 400% (+400% per stack) damage, plus 15% (+15% per stack) of their maximum health.\nDrops From Imp Overlord.", details: "Boss / Damage / Linear" },
+    { name: "Titanic Knurl", desc: "Increase maximum health by 40 (+40 per stack) and base health regeneration by +1.6 hp/s (+1.6 hp/s per stack).\nDrops From Stone Titan.", details: "Boss / Healing / Linear" },
+    { name: "Pearl", desc: "Increases maximum health by 10% (+10% per stack).\nObtained from Cleansing Pools.", details: "Boss / Pearl / Linear" },
+    { name: "Irradiant Pearl", desc: "Increases ALL stats by 10% (+10% per stack).\nObtained from Cleansing Pools.", details: "Boss / Pearl / Linear" },
+    { name: "Artifact Key", desc: "A stone shard with immense power.\nDrops From Artifact Reliquary.", details: "Boss / Special / N/A" },
+    { name: "Item Scrap, Yellow", desc: "Does nothing. Prioritized when used with 3D Printers.", details: "Boss / Scrap / N/A" },
+]
+&nbsp;
+const lunar_items = [
+    { name: "Beads of Fealty", desc: "Seems to do nothing... but...\n(Can be used to access 'A Moment, Whole' by using the Obelisk in 'A Moment, Fractured')", details: "Lunar / Special / N/A" },
+    { name: "Brittle Crown", desc: "30% chance on hit to gain 2 (+2 per stack) gold. Scales over time. Lose gold on taking damage equal to 100% (+100% per stack) of the maximum health percentage you lost.", details: "Lunar / Utility / Linear" },
+    { name: "Corpsebloom", desc: "Heal +100% (+100% per stack) more. All healing is applied over time. Can heal for a maximum of 10% (-50% per stack) of your health per second.", details: "Lunar / Healing / Linear" },
+    { name: "Defiant Gouge", desc: "Using a Shrine summons enemies (stronger per stack) nearby. Scales over time.", details: "Lunar / Utility / Linear" },
+    { name: "Egocentrism", desc: "Every 3 (-50% per stack) seconds, gain an orbiting bomb that deals 360% damage, up to a maximum of 3 bombs (+1 per stack). Every 60 seconds, a random item is converted into this item.", details: "Lunar / Damage / Linear" },
+    { name: "Eulogy Zero", desc: "Items have a 5% (+5% per stack) chance to become a Lunar item instead.", details: "Lunar / Utility / Linear" },
+    { name: "Focused Convergence", desc: "Teleporters charge 30% (+30% per stack) faster, but the size of the Teleporter zone is 50% (-50% per stack) smaller.", details: "Lunar / Utility / Linear" },
+    { name: "Gesture of the Drowned", desc: "Reduce Equipment cooldown by 50% (+15% per stack). Forces your Equipment to activate whenever it is off cooldown.", details: "Lunar / Utility / Linear" },
+    { name: "Light Flux Pauldron", desc: "Decrease skill cooldowns by 50% (+50% per stack). Decrease attack speed by 50% (+50% per stack).", details: "Lunar / Utility / Linear" },
+    { name: "Mercurial Rachis", desc: "Creates a Ward of Power in a random location nearby that buffs both enemies and allies within 16m (+50% per stack), causing them to deal +50% damage.", details: "Lunar / Utility / Linear" },
+    { name: "Purity", desc: "All skill cooldowns are reduced by 2 (+1 per stack) seconds. All random effects are rolled +1 (+1 per stack) times for an unfavorable outcome.", details: "Lunar / Utility / Linear" },
+    { name: "Shaped Glass", desc: "Increase base damage by 100% (+100% per stack). Reduce maximum health by 50% (+50% per stack).", details: "Lunar / Damage / Linear" },
+    { name: "Stone Flux Pauldron", desc: "Increase max health by 100% (+100% per stack). Reduce movement speed by 50% (+50% per stack).", details: "Lunar / Healing / Linear" },
+    { name: "Transcendence", desc: "Convert all but 1 health into regenerating shields. Gain 50% (+25% per stack) maximum health.", details: "Lunar / Utility / Linear" },
+&nbsp;
+    { name: "Effigy of Grief", desc: "ALL characters within are slowed by 50% and have their armor reduced by 20. Can place up to 5.\n15s Cooldown", details: "Lunar Equipment" },
+    { name: "Glowing Meteorite", desc: "Rain meteors from the sky, damaging ALL characters for 600% damage per blast. Lasts 20 seconds.\n140s Cooldown", details: "Lunar Equipment" },
+    { name: "Helfire Tincture", desc: "Ignite ALL characters within 15m for 12s. Deal 5% of your maximum health/second as burning as damage. The burn deals 0.5x to yourself, 0.25 to allies, and 24x to enemies.\n45s Cooldown", details: "Lunar Equipment" },
+    { name: "Spinel Tonic", desc: "Gain a massive boost to ALL stats for 20 seconds. Chance to gain an affliction that reduces ALL stats.\n60s Cooldown", details: "Lunar Equipment" },
+&nbsp;
+    { name: "Visions of Heresy", desc: "Replace your Primary Skill with Hungering Gaze.\nFire a flurry of tracking shards that detonate after a delay, dealing 120% base damage. Hold up to 12 charges (+12 per stack) that reload after 2 seconds (+2 per stack). ", details: "Lunar / Heresy / Linear" },
+    { name: "Hooks of Heresy", desc: "Replace your Secondary Skill with Slicing Maelstrom.\nCharge up a projectile that deals 875% damage per second to nearby enemies, exploding after 3 seconds to deal 700% damage and root enemies for 3 (+3 per stack) seconds. Recharges after 5 (+5 per stack) seconds. ", details: "Lunar / Heresy / Linear" },
+    { name: "Strides of Heresy", desc: "Replace your Utility Skill with Shadowfade.\nFade away, becoming intangible and gaining +30% movement speed. Heal for 18.2% (+18.2% per stack) of your maximum health. Lasts 3 (+3 per stack) seconds. ", details: "Lunar / Heresy / Linear" },
+    { name: "Essence of Heresy", desc: "Replace your Special Skill with Ruin.\nDealing damage adds a stack of Ruin for 10 (+10 per stack) seconds. Activating the skill detonates all Ruin stacks at unlimited range, dealing 300% damage plus 120% damage per stack of Ruin. Recharges after 8 (+8 per stack) seconds. ", details: "Lunar / Heresy / Linear" },
+]
+&nbsp;
+const void_common_items = [
+    { name: "Encrusted Key", desc: "A hidden cache containing an item (60%/30%/10%) will appear in a random location on each stage. Opening the cache consumes this item.\nCorrupts all Rusted Keys.", details: "Void / Utility / Linear" },
+    { name: "Lost Seer's Lenses", desc: "Your attacks have a 0.5% (+0.5% per stack) chance to instantly kill a non-Boss enemy.\nCorrupts all Lens-Maker's Glasses.", details: "Void / Damage / Linear" },
+    { name: "Needletick", desc: "10% (+10% per stack) chance to collapse an enemy for 400% base damage.\nCorrupts all Tri-Tip Daggers.", details: "Void / Damage / Linear" },
+    { name: "Safer Spaces", desc: "Blocks incoming damage once. Recharges after 15 seconds (-10% per stack).\nCorrupts all Tougher Times.", details: "Void / Utility / Linear" },
+    { name: "Weeping Fungus", desc: "Heals for 2% (+2% per stack) of your health every second while sprinting.\nCorrupts all Bustling Fungi.", details: "Void / Healing / Linear" },
+]
+&nbsp;
+const void_uncommon_items = [
+    { name: "Lysate Cell", desc: "Add +1 (+1 per stack) charge of your Special skill. Reduces Special skill cooldown by 33%.\nCorrupts all Fuel Cells.", details: "Void / Utility / Linear" },
+    { name: "Plasma Shrimp", desc: "Gain a shield equal to 10% of your maximum health. While you have a shield, hitting an enemy fires a missile that deals 40% (+40% per stack) TOTAL damage.\nCorrupts all AtG Missile Mk. 1s.", details: "Void / Damage / Linear" },
+    { name: "Polylute", desc: "25% chance to fire lightning for 60% TOTAL damage up to 3 (+3 per stack) times.\nCorrupts all Ukuleles.", details: "Void / Damage / Linear" },
+    { name: "Singularity Band", desc: "Hits that deal more than 400% damage also fire a black hole that draws in enemies within 15m for 5 seconds. 20 second cooldown.\nCorrupts all Runald's and Kjaro's Bands.", details: "Void / Utility / Linear" },
+    { name: "Tentabauble", desc: "5% (+5% per stack) chance on hit to root enemies for 1s (+1s per stack).\nCorrupts all Chronobaubles.", details: "Void / Utility / Linear" },
+    { name: "Voidsent Flame", desc: "Upon hitting an enemy at full health, spawn a lava pillar in a 12m (+2.4m per stack) radius for 260% (+156% per stack) base damage.\nCorrupts all Will-o'-the-wisps.", details: "Void / Damage / Linear" },
+]
+&nbsp;
+const void_legendary_boss_items = [
+    { name: "Benthic Bloom", desc: "Upgrades 3 (+3 per stack) random items to items of the next higher rarity at the start of each stage.\nCorrupts all 57 Leaf Clovers.", details: "Void / Utility / Linear" },
+    { name: "Pluripotent Larva", desc: "Upon death, this item will be consumed and you will return to life with 3 seconds of invulnerability, and all of your items that can be corrupted will be.\nCorrupts all Dio's Best Friends.", details: "Void / Utility / Linear" },
+    { name: "Newly Hatched Zoea", desc: "Every 60 (-50% per stack) seconds, gain a random Void ally. Can have up to 1 (+1 per stack) allies at a time.\nCorrupts all yellow items.", details: "Void / Damage / Linear" },
+]
+&nbsp;
+const itemCards = (items) =&gt; items.map((item) =&gt; {
+    var color = "";
+    if (item.details.includes("Common")) color = "text-white";
+    else if (item.details.includes("Uncommon")) color = "text-lime-400";
+    else if (item.details.includes("Legendary")) color = "text-red-400";
+    else if (item.details.includes("Boss")) color = "text-yellow-400";
+    else if (item.details.includes("Lunar")) color = "text-cyan-400";
+    else if (item.details.includes("Void")) color = "text-fuchsia-400";
+    var size = "w-96 h-72";
+    if (item.name.includes("Heresy")) size = "w-[36rem] h-64"
+    return {
+        size: size,
+        text: item.name,
+        imageSrc: `items/${item.name.replaceAll(' ', '_')}.webp`,
+        desc: item.desc,
+        details: item.details,
+        color: color,
+    }
+})
+&nbsp;
+const ItemsPage = () =&gt; {
+    return ( 
+        &lt;&gt;
+            &lt;Subheader title="Items"/&gt;
+            &lt;Subheader subtitle="Common Items"/&gt;
+            &lt;CardList cards={itemCards(common_items)}/&gt;
+            &lt;Subheader subtitle="Uncommon Items"/&gt;
+            &lt;CardList cards={itemCards(uncommon_items)}/&gt;
+            &lt;Subheader subtitle="Legendary Items"/&gt;
+            &lt;CardList cards={itemCards(legendary_items)}/&gt;
+            &lt;Subheader subtitle="Boss Items"/&gt;
+            &lt;CardList cards={itemCards(boss_items)}/&gt;
+            &lt;Subheader subtitle="Lunar Items"/&gt;
+            &lt;CardList cards={itemCards(lunar_items)}/&gt;
+            &lt;Subheader subtitle="Void Items"/&gt;
+            &lt;CardList cards={itemCards(void_common_items)}/&gt;
+            &lt;Subheader/&gt;
+            &lt;CardList cards={itemCards(void_uncommon_items)}/&gt;
+            &lt;Subheader/&gt;
+            &lt;CardList cards={itemCards(void_legendary_boss_items)}/&gt;
+        &lt;/&gt;
+     );
+}
+ 
+export default ItemsPage;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2024-03-15T06:01:35.854Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    
